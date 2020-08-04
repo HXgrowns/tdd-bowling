@@ -24,4 +24,10 @@ public class BowlingGameTest {
         assertEquals(0, result);
     }
 
+    @Test
+    void get_score_tenth_make_up_hit() {
+        int[] hits = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 8, 10};
+        int result = BowlingGame.calculateScore(hits);
+        assertEquals(20, result);
+    }
 }
