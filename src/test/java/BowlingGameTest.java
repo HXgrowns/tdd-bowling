@@ -16,4 +16,12 @@ public class BowlingGameTest {
         int result = BowlingGame.calculateScore(hits);
         assertEquals(131, result);
     }
+
+    @Test
+    void get_score_not_hit() {
+        int[] hits = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+        int result = BowlingGame.calculateScore(hits);
+        assertEquals(0, result);
+    }
+
 }
